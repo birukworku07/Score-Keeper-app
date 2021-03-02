@@ -1,7 +1,9 @@
-/* .firstPlayer {
+.winning {
 	color: green;
-} */
-
+} 
+.loser {
+	color: red;
+}
 .card-image {
 	width: 24rem;
 	height: 15.7rem;

@@ -72,3 +72,63 @@ const player1 = document.querySelector(".is-primary");
 const player2 = document.querySelector(".is-info");
 const reset = document.querySelector(".is-danger");
 
+const firstPlayer = document.querySelector("#first-player");
+const secondPlayer = document.querySelector("#second-player");
+const selector = document.querySelector("#playto");
+
+let firstPlayerScore = Number(firstPlayer.innerText);
+let secondPlayerScore = Number(secondPlayer.innerText);
+
+let selectorValue = Number(selector.value)
+
+
+
+player1.addEventListener('click', (e)=>{
+	if (firstPlayerScore < selectorValue) {
+		firstPlayerScore++;
+		firstPlayer.innerText = firstPlayerScore.toString();
+
+		if (firstPlayerScore === selectorValue) {
+			firstPlayer.classList.add("winning");
+			secondPlayer.classList.add("loser")
+		}
+	}	
+
+});
+
+
+player2.addEventListener('click', (e)=>{
+	if (secondPlayerScore < selectorValue) {
+		secondPlayerScore++;
+		secondPlayer.innerText = secondPlayerScore.toString();
+
+		if (secondPlayerScore === selectorValue) {
+			secondPlayer.classList.add("winning");
+			firstPlayer.classList.add("loser")
+		}
+	}
+	
+
+	
+});
+
+
+
+ const resetFunction = () => {
+	firstPlayerScore = 0;
+	secondPlayerScore = 0;
+	firstPlayer.innerText = '0';
+	secondPlayer.innerText = '0';
+	secondPlayer.classList.remove("winning");
+	secondPlayer.classList.remove("loser")
+	firstPlayer.classList.remove("winning");
+	firstPlayer.classList.remove("loser")
+ };
+
+ reset.addEventListener('click', resetFunction);
+
+selector.addEventListener('change', ()=> {
+ 	
+ 	selectorValue = Number(selector.value)
+	resetFunction();
+ });
