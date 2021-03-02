@@ -1,3 +1,62 @@
-.firstPlayer {
+/* .firstPlayer {
 	color: green;
+} */
+
+.card-image {
+	width: 24rem;
+	height: 15.7rem;
+	
+	
 }
+
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-top: 14rem;
+}
+
+.card-header {
+	width: 24rem;	
+}
+
+.card-body {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+}
+.content {
+
+	line-height: 1;
+	width: 24rem;
+	
+}
+
+.content p:nth-of-type(1) {
+	font-size: 2rem;
+}
+
+#playto {
+	border-radius: 40%;
+}
+
+.buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	
+}
+
+.button {
+	margin-top: 2rem;
+	width: 7.7rem
+}
+
